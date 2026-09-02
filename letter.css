@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do:wght@400;700&display=swap');
+
+:root {
+    --evergeen: #05221a;
+    --off-evergreen: #063024;
+    --blue-spruce: #136F63;
+    --sea-green: #22AAA1;
+    --turquoise: #4CE0D2;
+    --sky-blue: #84CAE7;
+}
+
+* {
+    touch-action: manipulation;
+}
+
+html {
+    font-size: 1rem;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+a {
+    color: var(--turquoise);
+}
+
+body {
+    background: var(--evergeen);
+}
+
+#start-music {
+    position: fixed;
+    background: var(--evergeen);
+    top: 1rem;
+    transition: opacity 250ms;
+}
+
+#letter {
+    opacity: 0;
+    animation: fadeInUp 500ms 100ms ease-out forwards;
+}
+
+.center-children {
+    display: flex;
+    place-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1.25rem;
+}
+
+.card {
+    background: var(--off-evergreen);
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 1rem 1rem #0005;
+    transition: transform 500ms ease-in;
+}
+
+h1 {
+    color: var(--turquoise);
+    font-family: 'Poppins', sans-serif;
+}
+
+h3 {
+    color: var(--sea-green);
+    font-family: 'Nothing You Could Do', serif;
+}
+
+p {
+    color: var(--sea-green);
+    font-family: 'Nothing You Could Do', serif;
+    font-size: 2rem;
+}
+
+button {
+    background: transparent;
+    color: var(--turquoise);
+    box-shadow:
+        0 0 1rem var(--blue-spruce),
+        inset 0 0 1rem var(--blue-spruce),
+        0 0 0.1rem white,
+        inset 0 0 0.1rem white;
+    text-shadow:
+        0 0 0.5rem var(--turquoise);
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+    border: 0.2rem solid var(--turquoise);
+    border-radius: 1rem;
+    font-family: 'Nothing You Could Do', serif;
+    transition:
+        transform 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275),
+        filter 100ms;
+    cursor: pointer;
+
+    @media (hover: hover) {
+        &:hover {
+            filter: brightness(1.25);
+        }
+    }
+}
